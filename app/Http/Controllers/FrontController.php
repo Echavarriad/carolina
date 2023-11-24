@@ -12,7 +12,7 @@ use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Mail;
 
 class FrontController extends GeneralController {
-    
+
     public function intro(){
         return view('pages.intro');
     }
@@ -49,7 +49,7 @@ class FrontController extends GeneralController {
         }
         $query->whereIn('categories.id', $ids);
       }
-      
+
       $subCategories = $querySubcategories->get();
       $query->inRandomOrder()->limit(4);
       $query->groupBy('products.id');
@@ -57,11 +57,11 @@ class FrontController extends GeneralController {
       $articles= Article::featured()->get();
 
       return view('pages.home', compact('productsFeatured', 'products', 'subCategories', 'articles', 'categorySelected'));
-    }    
+    }
 
-    public function about_us() { 
-      set_content(2); 
-      
+    public function about_us() {
+      set_content(2);
+
       return view('pages.about_us');
     }
 
@@ -73,7 +73,7 @@ class FrontController extends GeneralController {
         $idsArticles[$article->id] = $article->id;
       }
       $otherArticles = Article::published()->whereNotIn('id',$idsArticles)->limit(3)->get();
-      
+
       return view('pages.articles', compact('articles', 'otherArticles'));
     }
 
@@ -86,11 +86,11 @@ class FrontController extends GeneralController {
       return view('pages.article', compact('article', 'otherArticles'));
     }
 
-    public function contact(ContactRequest $request) { 
-      set_content(4); 
+    public function contact(ContactRequest $request) {
+      set_content(4);
       $send_form = 0;
       if ($request->isMethod('POST')){
-            $data = $request->all();            
+            $data = $request->all();
             if(!Recaptcha::validate($data['_recaptcha'])){
                 $send_form = -1;
             }else{
@@ -101,18 +101,18 @@ class FrontController extends GeneralController {
                 }
                 $send = Mail::send(new ContactMail($data));
                 if ($send) {
-                      FormContact::create($data);                         
+                      FormContact::create($data);
                       $send_form = 1;
                 }
             }
-      }    
+      }
 
       return view('pages.contact', compact('send_form'));
 
     }
 
     public function faqs() {
-      set_content(8); 
+      set_content(8);
       $faqsFeatured = FaqCategory::where('featured', true)->order()->get();
       $otherFaqs = FaqCategory::where('featured', false)->order()->get();
 
@@ -131,21 +131,21 @@ class FrontController extends GeneralController {
                 if(!Recaptcha::validate($data['_recaptcha'])){
                     $sw = -2;
                 }else{
-                    if (preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/', $data['email'])) { 
+                    if (preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/', $data['email'])) {
                         $data['email'] =  preg_replace('([^A-Za-z0-9 @._-])', '', $data['email']);
                         $data['email'] = htmlspecialchars($data['email']);
                         $send = Mail::send(new SendNewsletter($data));
                         if($send){
                             $sw = 1;
                             FormNewsletter::create($data);
-                        }                          
+                        }
                     }else{
                         $sw = -3;
-                    }                  
-              }               
-            }            
+                    }
+              }
+            }
             return response()->json(['status' => $sw]);
         }
-    
+
     }
 }

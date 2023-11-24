@@ -1,123 +1,153 @@
-@extends('layouts.master')
-@section('content')
-<section class="main_banner">
-    <div class="main_banner--cnt">
-        <div class="main_banner--content">
-            <div class="main_banner--image">
-                <picture>
-                    <x-image image="{{ $section->contents[0]->image_1 }}" alt="{{ $section->contents[0]->alt_1 }}" tit="{{ $section->contents[0]->tit_1 }}" class=""></x-image>
-                </picture>
-                <div class="main_banner--products">
-                    <div class="main_banner--products_cnt swiper">
-                        <div class="swiper-wrapper">
-                            @foreach($productsFeatured as $product)
-                            <div class="swiper-slide">
-                                @include('shop._partials.product')
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="main_banner--pagination"></div>
+@include('_partials.header_home')
+<main class="main">
+    <section class="section_one_main">
+        <section class="banner fade-bottom reveal">
+            <div>
+                <h1>DISCOVER NOW / scrolling down</h1>
+            </div>
+            <div class="backgroun-img">
+                <img src="{{ asset('img/video 2.png') }}" alt="" width="100%">
+            </div>
+        </section>
+        <section class="section_two_main">
+            <div class="section_two_main--top">
+                {{-- <h2>Nuestros tratamientos makeup<br> that’s skin loving</h2> --}}
+                <img src="{{ asset('img/services 01.png') }}" alt="" width="100%">
+            </div>
+
+            <div class="section_two_main--body flex">
+                <div>
+                    <img src="{{ asset('img/images.png') }}" alt="" width="100%">
+                </div>
+                <div class="section_two_text">
+                    <p class="section_two_text--one-p">Perfilamiento y aumento<br> labial.</p>
+                    <p class="section_two_text--two-p">On the other<br> hand, we magna<br> with righteous<br> labial.
+                    </p>
+                    <p class="section_two_text--three-p">
+                        who are so beguiled and demoralized by the<br> charms of pleasure of the moment, so blinded<br>
+                        by
+                        desire, that they cannot foresee the pain<br> and trouble that are bound to ensue; and<br> equal
+                        blame
+                        belongs to those who fail in their<br> duty through weakness of will,<br><br> which is the same
+                        as
+                        saying
+                        through<br> shrinking from toil and pain. These cases are<br> perfectly simple and easy to
+                        distinguish.
+                    </p>
+                    <a href="" type="buttom" class="">... Conoce más</a>
                 </div>
             </div>
-            <div class="main_banner--text">
-                {!! $section->contents[0]->text_1 !!}
+        </section>
+    </section>
+
+    <section class="section_three_main">
+        <div class="flex">
+            <div class="content section_content_one">
+                <img src="{{ asset('img/01.png') }}" alt="" width="100%">
+            </div>
+            <div class="content section_content_two">
+                <img src="{{ asset('img/02.png') }}" alt="" width="100%">
+            </div>
+            <div class="content section_content_three section_content_three--text">
+                <div class="flex">
+                    <div>
+                        <img src="{{ asset('img/info(5).png') }}" alt="">
+                    </div>
+
+                </div>
+                <div class="section_title">
+                    <h3>We have carefully selected each ingredient, so that not only the products</h3>
+                </div>
+                <div class="section_texte">
+                    <p>
+                        who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by
+                        desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                        belongs to those who fail in their duty through weakness of will, <br><br>which is the same as
+                        saying
+                        through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="products_block">
-    <div class="products_block--cnt">
-        <div class="products_block--title">
-            {!! $section->contents[1]->text_1 !!}
-            <div class="filters">
-                <div class="_filters-wrapper">
-                    <div class="_filters-title">
-                        <h4>{{ __('titles.filter_by') }}</h4>
-                    </div>
-                    <div class="_filters-content">
-                        <a href="{{ url()->current() . '?categoria=todas' }}" class="{{ !$categorySelected || $categorySelected == 'todas' ? 'active' : '' }}">{{ __('links.all_categories') }}</a>
-                        @foreach($subCategories as $subcat)
-                            <a href="{{ url()->current() . '?categoria='. $subcat->slug }}"
-                                class="{{ $categorySelected == $subcat->slug ? 'active' : '' }}">{{ $subcat->name }}</a>
-                        @endforeach
-                    </div>
+    </section>
+    <section class="section_four_main">
+        <div class="flex center">
+            <div class="section_four_content overlay">
+                <div><img class="img" src="{{ asset('img/Rectangle 17.png') }}" alt=""></div>
+                <div>
+                    <p>New survey sheds light on providers'
+                        embrace of telemedicine</p>
+                    <a href="">... Leer este blog</a>
                 </div>
-                <div class="_filter-next">
-                    <a href="{{ route('products') }}">{{ __('links.see_more') }}</a>
+            </div>
+            <div class="section_four_content overlay">
+                <div><img class="img" src="{{ asset('img/Rectangle 17 (1).png') }}" alt=""></div>
+                <div>
+                    <p>New survey sheds light on providers'
+                        embrace of telemedicine</p>
+                    <a href="">... Leer este blog</a>
+                </div>
+            </div>
+            <div class="section_four_content overlay">
+                <div><img class="img" src="{{ asset('img/01(7).png') }}" alt=""></div>
+                <div>
+                    <p>New survey sheds light on providers'
+                        embrace of telemedicine</p>
+                    <a href="">... Leer este blog</a>
                 </div>
             </div>
         </div>
-        <div class="products_block--content">
-            @foreach($products as $product)
-                @include('shop._partials.product')
-            @endforeach
+    </section>
+    <section class="section_five_content">
+        <div class="section_five_content--top">
+            <h1>What people are saying</h1>
+            <p>Experience worry / free beauty</p>
         </div>
-    </div>
-</section>
-<section class="product_banner">
-    <div class="product_banner--cnt">
-        <div class="product_banner--content">
-            <div class="_block-1">
-                <picture>
-                    <x-image image="{{ $section->contents[2]->image_1 }}" alt="{{ $section->contents[2]->alt_1 }}" tit="{{ $section->contents[2]->tit_1 }}" class=""></x-image>
-                </picture>
+        <div class="section_five_content--buttom flex">
+            <div class="section_five_content--text">
+                <h3 class="name">Sara Martínez</h3>
+                <p class="type">testimonio</p>
+                {{-- <i class="fa-brands fa-gratipay" style="color: #d3bf90;"></i> --}}
+                <hr>
+                <p class="comment">products feel amazing on the skin and so nourishing. I am able to easily create a
+                    natural look or an
+                    evening look.</p>
             </div>
-            <div class="_block-2">
-                <a href="{{ $section->contents[2]->url_1 }}" target="{{ $section->contents[2]->target_1 }}">
-                    <figure>
-                        <img src="{{ asset('img/icons/link.svg') }}" alt="">
-                    </figure>
-                    <picture>
-                        <x-image image="{{ $section->contents[2]->image_2 }}" alt="{{ $section->contents[2]->alt_2 }}" tit="{{ $section->contents[2]->tit_2 }}" class=""></x-image>
-                    </picture>
-                    <div class="_block-2_text">
-                        {!! $section->contents[2]->text_1 !!}
-                    </div>
-                </a>
+            <div class="section_five_content--text">
+                <h3>Alejandra Buitrago</h3>
+                <p class="type">testimonio</p>
+                <hr>
+                <p>products feel amazing on the skin and so nourishing. I am able to easily create a natural look or an
+                    evening look.</p>
+            </div>
+            <div class="section_five_content--text">
+                <h3>Ronald Ayazo</h3>
+                <p class="type">testimonio</p>
+                <hr>
+                <p>products feel amazing on the skin and so nourishing. I am able to easily create a natural look or an
+                    evening look.</p>
             </div>
         </div>
-    </div>
-</section>
-<section class="featured_blog">
-    <div class="featured_blog--cnt">
-        <div class="featured_blog--content">
-            @if(isset($articles[0]))
-            <article class="st_blog">
-                <div class="st_blog--image cursor" onclick="window.location.href=('{{ route('article', $articles[0]->slug) }}')">
-                    <picture>
-                        <x-image image="{{ $articles[0]->image_home }}" alt="{{ $articles[0]->alt }}" tit="{{ $articles[0]->tit }}" class=""></x-image>
-                    </picture>
-                </div>
-                <div class="st_blog--text">
-                    <div class="_head">
-                        <h6>{{ __('titles.blog_and_novelties') }}</h6>
-                        <small>{{ $articles[0]->formatDate() }}</small>
-                    </div>
-                    <div class="_title">
-                        <h5 class="cursor" onclick="window.location.href=('{{ route('article', $articles[0]->slug) }}')">{{ $articles[0]->title }}</h5>
-                    </div>
-                    <div class="_content">
-                        {!! substr($articles[0]->text_single_top, 0, 427) !!} ...
-                    </div>
-                    @include('_partials.links_articles', ['url' => route('article', $articles[0]->slug)])
-                </div>
-            </article>
-            @endif
-            @if(isset($articles[1]))
-                @include('_partials.article', ['article' => $articles[1]])
-            @endif
-        </div>
-    </div>
-</section>
-@endsection
-@push('js')
-    <script>
-        let categorySelected= '{{ $categorySelected }}';
-        $j= jQuery.noConflict();
-        if(categorySelected != ''){
-            var position = $j(".products_block--title").offset().top;
-            $j('html, body').animate( {scrollTop : position}, 1000 );
-        } 
-    </script>
-@endpush
+    </section>
+</main>
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+</script>
+
+@include('_partials.footer')

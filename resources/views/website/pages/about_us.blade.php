@@ -1,108 +1,99 @@
-@extends('layouts.master')
-@section('content')
-@include('_partials.banner')
-<section class="about_stBox">
-    <div class="about_stBox--cnt">
-        <div class="about_stBox--content">
-            {!! $section->contents[1]->text_1 !!}
+@include('_partials.header')
+<main class="main">
+    <section class="section_one_main">
+        {{-- <section class="section_one_about">
+            <div class="content_one flex">
+                <div class="section_one_main--left">
+                    <p class="section_title">On the other hand, we magna<br> with right
+
+                        shrinking
+                        cases<br>
+                        are perfectly simple.</p>
+                    <h4>being able to do what we<br>
+                        like best, every</h4>
+                    <p>be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty
+                        or the obligations of business it will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted.
+
+                        The wise man therefore always holds in these matters to this principle of selection: he rejects
+                        pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+                </div>
+                <div class="section_one_main--right"><img src="{{ asset('img/01 (1).png') }}" alt=""></div>
+            </div>
+            <div class="content_one flex">
+                <div class="section_two_main--left"><img src="{{ asset('img/Rectangle 16.png') }}" alt=""></div>
+                <div class="section_two_main--right">
+                    <p class="section_subtitle">the claims of duty or the<br> obligations of business</p>
+
+                    <p>belongs to those who fail in their duty through weakness of will, which is the same as saying
+                        through shrinking from toil and pain. These cases are perfectly simple and easy to
+                        distinguish.<br><br>
+
+                        In a free hour, when our power of choice is untrammelled and when nothing prevents our being
+                        able to do what we like best,</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="section_two_main">
+            <div class="content_two flex">
+                <div class="section_about">
+                    <h3>Who We Are</h3><br>
+                    <p>saying indignation and dislike men who are so<br> beguiled and demoralized by the charms of<br>
+                        pleasure
+                        of
+                        the moment, so blinded by desire, <br>that they cannot foresee the pain and trouble<br> that are
+                        bound.
+                        <br>
+
+                        blame belongs to those who fail in their duty<br> through weakness of will, which is the same
+                        as<br>
+                        saying
+                        through shrinking from toil and bain.
+                    </p>
+                </div>
+                <div class="section_about">
+                    <h3>What We Do</h3>
+                    <br>
+                    <p>welcome indignation and dislike men who are<br> so beguiled and demoralized by the charms of<br>
+                        pleasure
+                        of the moment, so blinded by desire,<br> that they cannot foresee the pain and trouble<br> that
+                        are
+                        bound.<br>
+
+                        blame belongs to those who fail in their duty<br> through weakness of will, which is the same
+                        as<br>
+                        saying through shrinking from toil and bain.</p>
+                </div>
+                <div class="section_about">
+                    <h3>vision / mission / values</h3>
+                    <br>
+                    <p>principle indignation and dislike men who are<br> so beguiled and demoralized by the charms
+                        of<br>
+                        pleasure of the moment, so blinded by desire,<br> that they cannot foresee the pain and
+                        trouble<br>
+                        that
+                        are bound.<br>
+
+                        blame belongs to those who fail in their duty<br> through weakness of will, which is the same
+                        as<br>
+                        saying through shrinking from toil and bain.</p>
+                </div>
+            </div>
+        </section> --}}
+        <img src="{{ asset('img/info 01.png') }}" alt="" width="100%" style="margin-top: 5%;margin-bottom: 5%">
+        <img src="{{ asset('img/info 01.png') }}" alt="" width="100%" style="margin-top: 5%;margin-bottom: 5%">
+        <div class="about_us flex">
+            <img src="{{ asset('img/info 02.png') }}" alt="" style="margin-bottom: 7%" width="80%">
         </div>
-    </div>
-</section>
-<section class="about_ndBox">
-    <div class="about_ndBox--cnt">
-        <div class="about_ndBox--content">
-            <div class="about_image">
-                <picture>
-                    <x-image image="{{ $section->contents[2]->image_1 }}" alt="{{ $section->contents[2]->alt_1 }}" tit="{{ $section->contents[2]->tit_1 }}" class=""></x-image>
-                </picture>
-            </div>
-            <div class="about_image">
-                <picture>
-                    <x-image image="{{ $section->contents[2]->image_2 }}" alt="{{ $section->contents[2]->alt_2 }}" tit="{{ $section->contents[2]->tit_2 }}" class=""></x-image>
-                </picture>
-            </div>
-            <div class="about_image">
-                <picture>
-                    <x-image image="{{ $section->contents[2]->image_3 }}" alt="{{ $section->contents[2]->alt_3 }}" tit="{{ $section->contents[2]->tit_3 }}" class=""></x-image>
-                </picture>
-            </div>
-            <div class="about_image">
-                <picture>
-                    <x-image image="{{ $section->contents[2]->image_4 }}" alt="{{ $section->contents[2]->alt_4 }}" tit="{{ $section->contents[2]->tit_4 }}" class=""></x-image>
-                </picture>
-            </div>
+
+    </section>
+    <section class="banner" style="margin: 0">
+        <div class="backgroun-img">
+            <img src="{{ asset('img/video 2.png') }}" alt="" width="100%">
+
         </div>
-    </div>
-</section>
-<section class="about_rdBox">
-    <div class="about_rdBox--cnt">
-        <div class="about_rdBox--content">
-            <div class="about_rdBox--left">
-                {!! $section->contents[3]->text_1 !!}
-            </div>
-            <div class="about_rdBox--right">
-                <div class="_box">
-                    <figure>
-                        <img src="{{ asset('img/icons/about-icon.svg') }}" alt="">
-                    </figure>
-                    <div class="_text-box">
-                        {!! $section->contents[4]->text_1 !!}
-                    </div>
-                </div>
-                <div class="_box">
-                    <figure>
-                        <img src="{{ asset('img/icons/about-icon.svg') }}" alt="">
-                    </figure>
-                    <div class="_text-box">
-                        {!! $section->contents[4]->text_2 !!}
-                    </div>
-                </div>
-                <div class="_box">
-                    <figure>
-                        <img src="{{ asset('img/icons/about-icon.svg') }}" alt="">
-                    </figure>
-                    <div class="_text-box">
-                        {!! $section->contents[4]->text_3 !!}
-                    </div>
-                </div>
-                <div class="_box">
-                    <figure>
-                        <img src="{{ asset('img/icons/about-icon.svg') }}" alt="">
-                    </figure>
-                    <div class="_text-box">
-                        {!! $section->contents[4]->text_4 !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="about_rthBox">
-    <div class="about_rthBox--cnt">
-        <div class="about_rthBox--content">
-            <div class="video_content">
-                @if(!empty($section->contents[5]->video))
-                    <a href="https://www.youtube.com/watch?v={{ $section->contents[5]->video }}" data-fancybox>
-                        <picture>
-                            <x-image image="{{ $section->contents[5]->image_1 }}" alt="{{ $section->contents[5]->alt_1 }}" tit="{{ $section->contents[5]->tit_1 }}" class=""></x-image>
-                        </picture>
-                        <figure>
-                            <img src="{{ asset('img/icons/play.svg') }}" />
-                        </figure>
-                    </a>
-                @else
-                    <picture>
-                        <x-image image="{{ $section->contents[5]->image_1 }}" alt="{{ $section->contents[5]->alt_1 }}" tit="{{ $section->contents[5]->tit_1 }}" class=""></x-image>
-                    </picture>
-                @endif
-                <div class="video_content--text">
-                    <figure>
-                        <img src="{{ asset('img/icons/about-icon-2.svg') }}" alt="">
-                    </figure>
-                    {!! $section->contents[5]->text_1 !!}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-@endsection
+    </section>
+</main>
+
+@include('_partials.footer')

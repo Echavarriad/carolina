@@ -66,4 +66,4 @@
             </ul>
         </div>
     </nav>
-    @include('_partials.slider')
+    @include('_partials.slider_home')
