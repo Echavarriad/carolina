@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    public $timestamps = false;
+    protected $guarded = [];
+
+    public function scopeOrder($query){
+          return $query->orderBy('order');
+    }
+
+    public function scopePublished($query){
+        return $query->where('published', 1)->order();
+    }
+}

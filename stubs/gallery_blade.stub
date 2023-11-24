@@ -1,0 +1,37 @@
+@extends('admin.layouts.admin')
+@section('content')
+
+<section class="content-header"></section>
+
+<section class="content">
+    <div class="row">
+        <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
+        @csrf
+        <div class="col-md-10 col-sm-12"> 
+            <div class="box box-info">	       
+                <div class="box-header with-border">
+                    <h3 class="box-title">{{ $plural }}</h3>
+                </div>
+                <div class="box-body"> 
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#tab_1" data-toggle="tab">Imágenes</a>
+                            </li>                           
+                        </ul>
+                        <div class="tab-content" id="app">
+                            <div class="tab-pane fade in active" id="tab_1">
+                                <gallery-images :data_images="{{ json_encode($records) }}" model_id="" url_uploads="{{ route($name.'.images') }}"  url_update="update-gallery-{{ folder }}" url_delete="delete-image-{{ folder }}" url_sort="update-gallery-{{ folder }}-position" size_images="" has_title="false"></gallery-images>
+                            </div>                       
+                        </div>                
+                    </div>                
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</section>
+@endsection
+@push('js')
+    <script src="{{ url('mng/js/backend.js') }}"></script>
+@endpush

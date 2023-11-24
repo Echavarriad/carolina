@@ -1,0 +1,35 @@
+[26-Sep-2023 18:03:52 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:52 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:54 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:54 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:56 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:56 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:57 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:03:57 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:08 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:08 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:28 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:28 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:42 UTC] PHP Warning:  require(/home/dulcycre/public_html/../../dulcy/vendor/autoload.php): failed to open stream: No such file or directory in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:04:42 UTC] PHP Fatal error:  require(): Failed opening required '/home/dulcycre/public_html/../../dulcy/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/dulcycre/public_html/index.php on line 24
+[26-Sep-2023 18:07:24 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:335
+Stack trace:
+#0 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(642): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(623): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(554): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(460): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(377): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/dulcycre/dulcy/app/Exceptions/Handler.php(53): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(493): App\Exceptions\Handler->render()
+#8 /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(138): Illuminate\Foundation\Http\Kernel->renderException()
+#9 /home/dulcycre/public_html/index.php(57): Illuminate\Foundation\Http\Kernel->handle()
+#10 {main}
+  thrown in /home/dulcycre/dulcy/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 335
+[27-Sep-2023 11:03:18 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8192 bytes) in /home/dulcycre/dulcy/app/Library/ResizeImage.php on line 26
+[27-Sep-2023 11:05:23 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8192 bytes) in /home/dulcycre/dulcy/app/Library/ResizeImage.php on line 26
+[27-Sep-2023 11:08:31 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8192 bytes) in /home/dulcycre/dulcy/app/Library/ResizeImage.php on line 26
+[09-Nov-2023 10:39:54 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10489856 bytes) in /home/dulcycre/dulcy/app/Http/Middleware/User.php on line 19
+[09-Nov-2023 10:40:40 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10489856 bytes) in /home/dulcycre/dulcy/app/Http/Middleware/User.php on line 19
+[10-Nov-2023 09:31:44 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10489856 bytes) in /home/dulcycre/dulcy/app/Http/Controllers/FrontController.php on line 22
+[10-Nov-2023 09:32:01 America/Bogota] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10489856 bytes) in /home/dulcycre/dulcy/app/Http/Controllers/FrontController.php on line 22

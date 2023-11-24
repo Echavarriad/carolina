@@ -1,0 +1,21 @@
+<?php
+return array (
+  'home' => 'Home',
+  'about_us' => 'Nosotros',
+  'articles' => 'Blogs',
+  'products' => 'Productos',
+  'contact' => 'Contacto',
+  'faqs' => 'Preguntas frecuentes',
+  'policies' => 'Políticas de privacidad',
+  'terms' => 'Términos y condiciones',
+  'shipping' => 'Envío y entrega',
+  'login' => 'Ingresar',
+  'register' => 'Registrarse',
+  'forgot_password' => 'Recuperar contraseña',
+  'change_password' => 'Cambiar contraseña',
+  'my_account' => 'Mi cuenta',
+  'addresses' => 'Direcciones',
+  'cart' => 'Carrito',
+  'checkout' => 'Checkout',
+  'payment' => 'Pago',
+);

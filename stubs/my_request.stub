@@ -1,0 +1,40 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class {{ class }}Request extends FormRequest
+{  
+    public function authorize(){
+        return true;
+    }
+
+    public function rules(){
+        $rules = [
+            'title'=>'required', 
+            'text'=>'required', 
+        ];
+
+        if($this->method() == 'POST'){
+            $rules['slug'] = 'unique:{{ table }}';
+        }
+
+        if($this->method() == 'PUT'){
+            $rules['slug'] = 'unique:{{ table }},slug,'.request()->id;
+        }
+        
+        return $rules;        
+
+    }
+
+    public function messages(){      
+        return [
+            'title.required'=>'El título es requerido',
+            'text.required'=>'El texto es requerido',
+            'slug.unique'=>'La URL para SEO debe ser única',
+        ];
+    }   
+
+}
+

@@ -1,0 +1,28 @@
+<?php
+return array (
+  'required_name' => 'El nombre es requerido',
+  'required_lastname' => 'El apellido es requerido',
+  'required_email' => 'El correo electrónico es requerido',
+  'email_invalid' => 'Ingrese un correo válido',
+  'required_mobile' => 'El celualar es requerido',
+  'required_city' => 'La ciudad es requerida',
+  'required_address' => 'La dirección es requerida',
+  'required_name_address' => 'El nombre de la dirección es requerida',
+  'required_phone' => 'El Teléfono Móvil / Fijo es requerido',
+  'required_message' => 'El mensaje es requerido',
+  'required_password' => 'La contraseña es requerida',
+  'required_current_password' => 'La contraseña actual es requerida',
+  'required_new_password' => 'La nueva contraseña es requerida',
+  'required_document' => 'El documento es requerido',
+  'required_type_document' => 'El tipo de documento es requerido',
+  'selected_check' => 'Debe aceptar las condiciones de tratamiento de datos',
+  'invalid_recaptcha' => 'reCAPTCHA inválido',
+  'send_email' => 'Su mensaje ha sido enviado con éxito, pronto nos contáctaremos con usted.',
+  'error_send_email' => 'Error enviando el correo, intente nuevamente.',
+  'send_newsletter' => 'El correo electrónico se registró en nuestra lista de boletines.',
+  'min_password' => 'La contraseña debe ser mínimo de ',
+  'characters' => 'caracteres.',
+  'letter_number_password' => 'La contraseña debe incluir letras y números.',
+  'not_same_password' => 'Las contraseñas no coinciden',
+  'email_is_registered' => 'Este correo ya se encuentra registrado en nuestro listado'
+);
